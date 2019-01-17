@@ -104,7 +104,7 @@ async def changelog(ctx):
 @bot.command(pass_context=True)
 async def setpfp(ctx, url):
     if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank:
-	try:
+        try:
             async with aiohttp.ClientSession() as session:
                 async with session.get(url) as r:
                     data = await r.read()
