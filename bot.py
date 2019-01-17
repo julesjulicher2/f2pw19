@@ -110,7 +110,7 @@ async def setpfp(ctx, url):
                     data = await r.read()
             await bot.edit_profile(avatar=data)
             await bot.say("yep")
-			await bot.say("als de profielfoto niet direct verandert wacht dan 1 uur")
+	    await bot.say("als de profielfoto niet direct verandert wacht dan 1 uur")
         except:
             discord.errors.Forbidden
             
