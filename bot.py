@@ -56,19 +56,19 @@ async def on_command_error(ctx, error):
     if isinstance(ctx, discord.ext.commands.errors.CommandNotFound):
         embed = discord.Embed(title="Error:",
                               description="Damm it! I cant find that! Try `fw!help`.",
-                              colour=0xff0000)
+                              colour=0x2712ff)
         await bot.send_message(error.message.channel, embed=embed)
     else:
         embed = discord.Embed(title="Error:",
                               description=f"{ctx}",
-                              colour=0xff0000)
+                              colour=0x2712ff)
         await bot.send_message(error.message.channel, embed=embed)
     
 #----------------------------------------------------------------------------------------------
 #info cmds
 @bot.command(pass_context=True)
 async def info(ctx, user: discord.Member):
-    embed = discord.Embed(title="{}'s info".format(user.name), description="Here is what i could find.", color=0xFF0000)
+    embed = discord.Embed(title="{}'s info".format(user.name), description="Here is what i could find.", color=0x2712ff)
     embed.add_field(name="name", value=user.name, inline=True)
     embed.add_field(name="ID", value=user.id, inline=True)
     embed.add_field(name="Status", value=user.status, inline=True)
@@ -80,7 +80,7 @@ async def info(ctx, user: discord.Member):
 
 @bot.command(pass_context=True)
 async def serverinfo(ctx):
-    embed = discord.Embed(description="Here's what I could find:", color=0xff0000)
+    embed = discord.Embed(description="Here's what I could find:", color=0x2712ff)
     embed.add_field(name="Name", value=ctx.message.server.name)
     embed.add_field(name="Owner", value=ctx.message.server.owner)
     embed.add_field(name="Region", value=ctx.message.server.region)
@@ -174,7 +174,7 @@ async def add(ctx, url):
 async def help(ctx):
     if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank or ctx.message.author.id == jannes or ctx.message.author.id == axxel:
         author = ctx.message.author
-        embed = discord.Embed(colour = 0xff0000)
+        embed = discord.Embed(colour = 0x2712ff)
         embed.set_author(name="help")
         embed.add_field(name="serverinfo", value="geeft informatie over de server", inline = False)
         embed.add_field(name="info", value="geeft informatie over een persoon. gebruik dt!info @persoon", inline = False)
@@ -194,7 +194,7 @@ async def help(ctx):
         await bot.send_message(author, embed=embed)
     else:
         author = ctx.message.author
-        embed = discord.Embed(colour = 0xff0000)
+        embed = discord.Embed(colour = 0x2712ff)
         embed.set_author(name="help")
         embed.add_field(name="serverinfo", value="geeft informatie over de server", inline = False)
         embed.add_field(name="info", value="geeft informatie over een persoon. gebruik dt!info @persoon", inline = False)
