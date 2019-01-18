@@ -235,16 +235,14 @@ async def remove_cmd(ctx, cmd):
         return await bot.say("No perms from developers")
     await bot.say("cmd is verwijdert :ok_hand:")
     bot.remove_command(cmd)
-@bot.command()
+@bot.command(pass_context=True)
 async def sendm(ctx, ch, *, msg):
     if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank:
         channel = bot.get_channel(ch)
         if channel:
             await bot.send_message(channel, msg)
-        else:
-            await bot.say('I can not find that channel')
-
-
+    else:
+        await bot.say('I can not find that channel')
 
 
 
