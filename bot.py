@@ -108,8 +108,7 @@ async def setpfp(ctx, url):
                 async with session.get(url) as r:
                     data = await r.read()
             await bot.edit_profile(avatar=data)
-            await bot.say("yep")
-	    await bot.say("als de profiel foto niet verandert, gebruik de cmd niet opnieuw maar wacht een uur en het zal gebeuren. dit heeft te maken met discord limits")
+            await bot.say("yep, als de profiel foto niet verandert, gebruik de cmd niet opnieuw maar wacht een uur en het zal gebeuren. dit heeft te maken met discord limits")    
         except:
             discord.errors.Forbidden
             
