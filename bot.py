@@ -31,7 +31,7 @@ async def on_ready():
     await loop()
 @bot.event
 async def on_member_join(member):
-    role = discord.utils.get(member.server.roles, name = "W19")
+    role = discord.utils.get(member.server.roles, name = "F2P community")
     await bot.add_roles(member, role)
 
 	
