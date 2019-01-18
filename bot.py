@@ -212,7 +212,7 @@ async def help(ctx):
 #----------------------------------------------------------------------------------------------------------------
 @bot.command(pass_context = True)
 async def kick(ctx, member: discord.Member):
-	if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank or ctx.message.author.id == jannes or ctx.message.author.id == allex:
+    if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank or ctx.message.author.id == jannes or ctx.message.author.id == allex:
         try:
             await bot.say(":boot: bye!""{}".format(member.mention))
             await bot.kick(member)
@@ -237,14 +237,14 @@ async def remove_cmd(ctx, cmd):
     bot.remove_command(cmd)
 @bot.command()
 async def sendm(ch, *, msg):
-	if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank:
-    	channel = bot.get_channel(ch)
-    	if channel:
-        	await bot.send_message(channel, msg)
-    	else:
-        	await bot.say('I can not find that channel')
-	else:
-		await bot.say("nene kun je lekker toch niet")
+    if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank:
+        channel = bot.get_channel(ch)
+        if channel:
+            await bot.send_message(channel, msg)
+        else:
+            await bot.say('I can not find that channel')
+    else:
+        await bot.say("geen toegang")
 
 
 
