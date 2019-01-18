@@ -15,7 +15,7 @@ bot.remove_command('help')
 async def on_member_join(member):
     channel = member.server.get_channel("535885925272518656")
     fmt = 'Welkom bij de {1.name}, {0.mention}, please lees de regels en geniet van de server'
-    await bot.send_message(channel, fmt.format(member, member.channe;))
+    await bot.send_message(channel, fmt.format(member, member.channel))
 
 @bot.event
 async def on_member_remove(member):
