@@ -190,8 +190,7 @@ async def help(ctx):
         embed.add_field(name="kick", value="kick de gementionde persoon **mod only**", inline=False)
         embed.add_field(name="reboot", value="precies wat het zegt, **dev only**", inline=False)
         embed.add_field(name="remove_cmd", value="verwijdert een cmd, **dev only**", inline=False)
-		embed.add_field(name="sendm", value="gebruik = fw!sendm channelidhere
-        embed.add_field(name="announce", value="gebruik is als volg, dubbele haakjes hier announcement hier dubbele haakjes hier, hier ja of nee of je iedereen wilt mentionen ***mod only**", inline=False)
+        embed.add_field(name="sendm", value="gebruik = fw!sendm <channelidhere>")
         await bot.send_message(author, embed=embed)
     else:
         author = ctx.message.author
