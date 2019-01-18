@@ -212,7 +212,7 @@ async def help(ctx):
 #----------------------------------------------------------------------------------------------------------------
 @bot.command(pass_context = True)
 async def kick(ctx, member: discord.Member):
-	if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank or ctx.message.author.id == jannes or ctx.message.author.id == allex
+	if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank or ctx.message.author.id == jannes or ctx.message.author.id == allex:
         try:
             await bot.say(":boot: bye!""{}".format(member.mention))
             await bot.kick(member)
