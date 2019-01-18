@@ -101,20 +101,20 @@ async def ping(ctx):
 @bot.command(pass_context=True)
 async def changelog(ctx):
     await bot.say("bot is gemaakt")
-@bot.command(pass_context=True)
 async def setpfp(ctx, url):
     if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank:
-        async with aiohttp.ClientSession() as session:
-            async with session.get(url) as r:
-                data = await r.read()
-        await bot.edit_profile(avatar=data)
-        await bot.say("yep")
-	await bot.say("als de profielfoto niet direct verandert wacht dan 1 uur")
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.get(url) as r:
+                    data = await r.read()
+            await bot.edit_profile(avatar=data)
+            await bot.say("yep")
+	    await bot.say("als de profiel foto niet verandert, gebruik de cmd niet opnieuw maar wacht een uur en het zal gebeuren. dit heeft te maken met discord limits")
         except:
             discord.errors.Forbidden
             
     else:
-        await bot.say("nop")
+	await bot.say("nop")
 #music cmds___________________________________________________
 @bot.command(pass_context=True)
 async def join(ctx):
