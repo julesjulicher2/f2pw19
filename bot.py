@@ -104,13 +104,12 @@ async def changelog(ctx):
 @bot.command(pass_context=True)
 async def setpfp(ctx, url):
     if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank:
-        try:
-            async with aiohttp.ClientSession() as session:
-                async with session.get(url) as r:
-                    data = await r.read()
-            await bot.edit_profile(avatar=data)
-            await bot.say("yep")
-	    await bot.say("als de profielfoto niet direct verandert wacht dan 1 uur")
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as r:
+                data = await r.read()
+        await bot.edit_profile(avatar=data)
+        await bot.say("yep")
+	await bot.say("als de profielfoto niet direct verandert wacht dan 1 uur")
         except:
             discord.errors.Forbidden
             
