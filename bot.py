@@ -236,7 +236,7 @@ async def remove_cmd(ctx, cmd):
     await bot.say("cmd is verwijdert :ok_hand:")
     bot.remove_command(cmd)
 @bot.command()
-async def sendm(ch, *, msg):
+async def sendm(ctx, ch, *, msg):
     if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank:
         channel = bot.get_channel(ch)
         if channel:
