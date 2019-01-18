@@ -243,8 +243,7 @@ async def sendm(ch, *, msg):
             await bot.send_message(channel, msg)
         else:
             await bot.say('I can not find that channel')
-    else:
-        await bot.say("geen toegang")
+
 
 
 
