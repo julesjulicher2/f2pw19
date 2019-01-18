@@ -172,7 +172,7 @@ async def add(ctx, url):
 #_______________________________________
 @bot.command(pass_context=True)
 async def help(ctx):
-	if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank or ctx.message.author.id == jannes or ctx.message.author.id == axxel:
+    if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank or ctx.message.author.id == jannes or ctx.message.author.id == axxel:
         author = ctx.message.author
         embed = discord.Embed(colour = 0xff0000)
         embed.set_author(name="help")
