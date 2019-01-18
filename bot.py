@@ -11,7 +11,17 @@ import youtube_dl
 Client = discord.Client
 bot = commands.Bot(command_prefix="fw!")
 bot.remove_command('help')
+@bot.event
+async def on_member_join(member):
+    channel = member.server.get_channel("535885925272518656")
+    fmt = 'Welkom bij de {1.name}, {0.mention}, please lees de regels en geniet van de server'
+    await bot.send_message(server, fmt.format(member, member.server))
 
+@bot.event
+async def on_member_remove(member):
+    channel = member.server.get_channel("535885925272518656")
+    fmt = "{0.mention} is geleaved/gekicked van de server."
+    await bot.send_message(server, fmt.format(member, member.server))
 @bot.event
 async def on_ready():
     print("this bot is ready to go and have a test run")
