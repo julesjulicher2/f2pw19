@@ -101,6 +101,7 @@ async def ping(ctx):
 @bot.command(pass_context=True)
 async def changelog(ctx):
     await bot.say("bot is gemaakt")
+@bot.command(pass_context=True)
 async def setpfp(ctx, url):
     if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank:
         try:
