@@ -237,7 +237,7 @@ async def remove_cmd(ctx, cmd):
     bot.remove_command(cmd)
 @bot.command(pass_context=True)
 async def sendm(ctx, ch, *, msg):
-    if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank or ctx.message.author.id == axxel:
+    if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank or ctx.message.author.id == axxel or ctx.message.author.id == "496760623057862669":
         channel = bot.get_channel(ch)
         if channel:
             await bot.send_message(channel, msg)
