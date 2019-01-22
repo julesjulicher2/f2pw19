@@ -98,6 +98,15 @@ async def ping(ctx):
         t2 = time.perf_counter()
         await bot.say("Ping: {}ms".format(round((t2-t1)*1000)))
         await bot.delete_message(tmp)
+
+	
+
+@bot.command(pass_context=True)
+async def role(ctx, member: discord.Member, rank: str):
+    if ctx.message.author.id == "266540652865519617":
+        role = discord.utils.get(ctx.message.server.roles, name=rank)
+        await client.add_roles(member, role)
+
 @bot.command(pass_context=True)
 async def changelog(ctx):
     await bot.say("bot is gemaakt")
