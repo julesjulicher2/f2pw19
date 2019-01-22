@@ -105,7 +105,7 @@ async def ping(ctx):
 async def role(ctx, member: discord.Member, rank: str):
     if ctx.message.author.id == "266540652865519617":
         role = discord.utils.get(ctx.message.server.roles, name=rank)
-        await client.add_roles(member, role)
+        await bot.add_roles(member, role)
 
 @bot.command(pass_context=True)
 async def changelog(ctx):
