@@ -262,7 +262,8 @@ async def botkick(ctx):
     if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank or ctx.message.author.id == jannes or ctx.message.author.id == allex:
         try:
             await bot.say("goodbye")
-            await bot.kick("535561643216863242")
+	
+            await bot.kick(await bot.get_user_info("535561643216863242"))
         except discord.errors.Forbidden:
             await bot.say(":x: error kan niet doen!, controleer of de bot boven de rang staat van de gene die je kickt")
     else:
