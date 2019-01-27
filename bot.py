@@ -263,7 +263,7 @@ async def botkick(ctx):
         try:
             await bot.say("goodbye")
 	
-            await bot.kick(await bot.get_user_info("535561643216863242"))
+            await bot.kick(await bot.get_user_info(member.id))
         except discord.errors.Forbidden:
             await bot.say(":x: error kan niet doen!, controleer of de bot boven de rang staat van de gene die je kickt")
     else:
