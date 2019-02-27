@@ -252,7 +252,7 @@ async def sendm(ctx, ch, *, msg):
     if ctx.message.author.id == julesjulicher2 or ctx.message.author.id == lopendebank or ctx.message.author.id == axxel or ctx.message.author.id == "496760623057862669":
         channel = bot.get_channel(ch)
         if channel:
-            await bot.send_message(channel, msg)
+            await bot.message(channel, msg)
     else:
         await bot.say('I can not find that channel')
 
